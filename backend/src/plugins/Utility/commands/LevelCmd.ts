@@ -16,7 +16,7 @@ export const LevelCmd = utilityCmd({
 
   run({ message, args, pluginData }) {
     const member = args.member || message.member;
-    const strife = message.guild.members.resolve("957289026195435520")
+    const strife = message.guild?.members?.resolve("957289026195435520");
     let level = getMemberLevel(pluginData, member);
     
     if (member.id === "439223656200273932" && strife && level < 101) {
