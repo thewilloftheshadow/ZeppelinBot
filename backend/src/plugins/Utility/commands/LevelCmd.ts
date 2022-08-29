@@ -19,8 +19,8 @@ export const LevelCmd = utilityCmd({
     const strife = message.guild?.members?.resolve("957289026195435520");
     let level = getMemberLevel(pluginData, member);
     
-    if (member.id === "439223656200273932" && strife && level < 101) {
-      level = getMemberLevel(pluginData, strife)
+    if (member.id === "439223656200273932" && strife && level !== 6969) {
+      level = getMemberLevel(pluginData, strife) + 1;
     }
     
     message.channel.send(`The permission level of ${member.user.tag} is **${level}**`);
